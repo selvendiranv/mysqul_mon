@@ -1,0 +1,32 @@
+create database university;
+create table university.students(
+student_id INT primary key,
+student_name VARCHAR(50),
+student_age INT,
+student_major VARCHAR(50)
+);
+insert into university.students values
+(1,"ram",20,"mechanical"),
+(2,"sam",20,"mechanical"),
+(3,"selva",20,"robotics"),
+(4,"july",19,"ECE"),
+(5,"may",20,"AI"),
+(6,"april",19,"EEE"),
+(7,"sara",21,"computer science"),
+(8,"lee",20,"computer science"),
+(9,"mery",20,"compter science"),
+(10,"jack",22,"civil");
+
+select * from University.students;
+drop table University.students;
+
+SELECT * FROM University.students
+WHERE student_major LIKE "Co%";
+
+SELECT max(student_age) from University.students;
+
+UPDATE University.students SET student_major="Computer science" WHERE student_id=1;
+select * from university.students;
+
+delete from university.students where student_id = 1;
+select * from university.students;
